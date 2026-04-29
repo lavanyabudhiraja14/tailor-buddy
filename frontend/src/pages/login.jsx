@@ -13,7 +13,7 @@ export default function Login() {
     console.log("Login clicked");
 
     try {
-      const res = await fetch("http://localhost:8000/api/users/login", {
+      const res = await fetch(`${API}/api/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
