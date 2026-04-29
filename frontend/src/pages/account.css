@@ -1,0 +1,262 @@
+.account-container {
+    display: flex;
+    padding: 40px;
+    background: #f3f3f3;
+    height: 100vh;
+  }
+  
+  /* SIDEBAR */
+  .sidebar {
+    width: 250px;
+    background: #eae6df;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .sidebar h3 {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar a {
+    display: block;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    background: #f5f5f5;
+  }
+  
+  /* ACTIVE LINK */
+  .sidebar a.active {
+    background: #dcd6cf;
+    font-weight: bold;
+  }
+  
+  /* RIGHT SIDE */
+  .account-content {
+    flex: 1;
+    margin-left: 20px;
+    background: #eae6df;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  /* ORDER CARD */
+  .order-card {
+    display: flex;
+    justify-content: space-between;
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .order-card img {
+    width: 100px;
+    border-radius: 10px;
+  }
+  .privacy-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  /* CARD STYLE */
+  .card {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  /* INPUTS */
+  .card input {
+    width: 80%;
+    padding: 10px;
+    margin: 8px 0; 
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  /* BUTTONS */
+  .primary-btn {
+    background: #2f2b4a;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 10px;
+  }
+  
+  .secondary-btn {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  
+  .danger-btn {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    background: #ffcccc;
+    border: none;
+  }
+  
+  /* INFO ROW */
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  /* ERROR */
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+  .measurements-container {
+    background: #eae6df;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  /* GRID */
+  .measure-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  /* INPUT BOX */
+  .measure-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .measure-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  
+  .measure-box span {
+    font-size: 12px;
+    color: gray;
+  }
+  
+  /* SAVE BUTTON */
+  .save-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #2f2b4a;
+    color: white;
+    cursor: pointer;
+  }
+  .address-container {
+    background: #eae6df;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  /* CARD */
+  .address-card {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+  
+  /* TEXT */
+  .address-card p {
+    margin: 10px 0;
+  }
+  
+  /* INPUT */
+  .address-card input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  /* BUTTON */
+  .address-card button {
+    padding: 8px 15px;
+    border-radius: 10px;
+    background: #2f2b4a;
+    color: white;
+    border: none;
+  }
+  
+  /* ADD NEW */
+  .add-new {
+    text-align: right;
+    cursor: pointer;
+    color: #333;
+  }
+  /* DELETE BUTTON */
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #888;
+  }
+  
+  .delete-btn:hover {
+    color: red;
+  }
+  
+  /* make card relative for positioning */
+  .address-card {
+    position: relative;
+  }
+  /* ADD BOX CONTAINER */
+.add-box {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  /* INPUT (LOGIN STYLE 🔥) */
+  .add-box input {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: #f8f6f3;
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s;
+  }
+  
+  /* FOCUS EFFECT */
+  .add-box input:focus {
+    border-color: #2f2b4a;
+    background: #fff;
+  }
+  
+  /* BUTTON (MATCH LOGIN BTN) */
+  .add-box button {
+    padding: 12px 20px;
+    border-radius: 20px;
+    background: #2f2b4a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  /* HOVER */
+  .add-box button:hover {
+    opacity: 0.9;
+  }

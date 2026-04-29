@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #f3f3f3;
+  }
+  
+  /* CENTERING */
+  .signup-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* CARD */
+  .signup-card {
+    width: 500px;
+    background: #eae6df;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  /* LOGO */
+  .logo {
+    font-family: cursive;
+    margin-bottom: 25px;
+  }
+  
+  /* INPUTS */
+  .signup-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1px solid #bbb;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  /* BUTTON */
+  .signup-btn {
+    width: 200px;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background-color: #2f2b4a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* LOGIN TEXT */
+  .login-text {
+    margin-top: 15px;
+    font-size: 13px;
+  }
+  
+  .login-text span {
+    color: blue;
+    cursor: pointer;
+  }
