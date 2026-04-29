@@ -1,15 +1,33 @@
-const API = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
-export const signup = (data) =>
-  fetch(`${API}/api/users/signup`, {
+// ✅ Signup API
+export const signup = async (userData) => {
+  const res = await fetch(`${API_URL}/api/users/signup`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(userData),
   });
 
-export const login = (data) =>
-  fetch(`${API}/api/users/login`, {
+  const data = await res.json();
+
+  if (!res.ok) throw new Error(data.message);
+  return data;
+};
+
+// ✅ Login API
+export const login = async (userData) => {
+  const res = await fetch(`${API_URL}/api/users/login`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(userData),
   });
+
+  const data = await res.json();
+
+  if (!res.ok) throw new Error(data.message);
+  return data;
+};

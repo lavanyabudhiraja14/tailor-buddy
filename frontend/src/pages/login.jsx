@@ -1,7 +1,8 @@
 import "./login.css";
-import { Link , useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import tailorImg from "../assets/tailoring.jpg"; 
+import tailorImg from "../assets/tailoring.jpg";
+import { login } from "../api"; // ✅ import API
 
 export default function Login() {
 
@@ -10,51 +11,35 @@ export default function Login() {
   const navigate = useNavigate();
 
   const handleLogin = async () => {
-    console.log("Login clicked");
-
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
-
-      const data = await res.json();
-
-      // ✅ SUCCESS
-      if (data.message === "Login successful") {
-        localStorage.setItem("userEmail", data.user.email);
-        navigate("/"); // 🔥 redirect to home
-      }
+      const data = await login({ email, password });
 
       alert(data.message);
 
+      // ✅ success
+      localStorage.setItem("userEmail", data.user.email);
+      navigate("/");
+
     } catch (err) {
       console.log(err);
-      alert("Error connecting to server");
+      alert(err.message || "Login failed");
     }
   };
-
-
 
   return (
     <div className="login-container">
       <div className="login-card">
 
-        {/* LEFT IMAGE */}
         <div className="login-image">
           <img src={tailorImg} alt="tailor" />
         </div>
 
-        {/* RIGHT FORM */}
         <div className="login-form">
           <h2 className="logo">TailorBuddy</h2>
 
           <input
             type="text"
-            placeholder="email or phone number"
+            placeholder="email"
             onChange={(e) => setEmail(e.target.value)}
           />
 
@@ -68,12 +53,12 @@ export default function Login() {
             Don’t have an account? <Link to="/signup">Sign-Up</Link>
           </p>
 
-          <button className="login-btn" onClick={handleLogin}>Login</button>
+          <button className="login-btn" onClick={handleLogin}>
+            Login
+          </button>
         </div>
 
       </div>
-      
     </div>
-    
   );
 }
