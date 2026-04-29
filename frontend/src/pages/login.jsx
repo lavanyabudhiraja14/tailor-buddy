@@ -13,7 +13,7 @@ export default function Login() {
     console.log("Login clicked");
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users/signup`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
