@@ -12,7 +12,7 @@ export default function Signup() {
     console.log("Signup clicked"); // debug
 
     try {
-      const res = await fetch("http://localhost:8000/api/users/signup", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/users/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
